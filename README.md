@@ -1,2 +1,2 @@
-# kiranrajr.dev
-Personal profile 
+# kiranraj.dev
+Portfolio website
