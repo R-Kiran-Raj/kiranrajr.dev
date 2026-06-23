@@ -79,10 +79,12 @@
 
   function animateStats() {
     if (statsAnimated) return;
+    statsAnimated = true;
     statNums.forEach((el) => {
       const target = parseInt(el.dataset.count, 10);
       const duration = 1800;
       const start = performance.now();
+      el.textContent = "0";
 
       function tick(now) {
         const progress = Math.min((now - start) / duration, 1);
@@ -93,7 +95,6 @@
 
       requestAnimationFrame(tick);
     });
-    statsAnimated = true;
   }
 
   const statsSection = document.querySelector(".stats");
@@ -102,9 +103,17 @@
       (entries) => {
         if (entries[0].isIntersecting) animateStats();
       },
-      { threshold: 0.3 }
+      { threshold: 0.1, rootMargin: "0px" }
     );
     statsObserver.observe(statsSection);
+
+    // Animate immediately if stats are already visible on load
+    requestAnimationFrame(() => {
+      const rect = statsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        animateStats();
+      }
+    });
   }
 
   const sections = document.querySelectorAll("section[id]");
