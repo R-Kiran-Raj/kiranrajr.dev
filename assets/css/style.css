@@ -279,11 +279,19 @@ img {
 }
 
 .hero__role {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 600;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
   min-height: 2.2rem;
+}
+
+.hero__subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
 }
 
 .hero__tagline {
@@ -519,6 +527,25 @@ img {
 
 .about__text strong {
   color: var(--text);
+}
+
+.about__industries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.about__industries span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.85rem;
+  background: rgba(0, 229, 199, 0.08);
+  border: 1px solid rgba(0, 229, 199, 0.2);
+  border-radius: 999px;
+  color: var(--accent);
 }
 
 .detail-card {

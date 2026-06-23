@@ -2,11 +2,11 @@
   "use strict";
 
   const roles = [
-    "Engineering Lead",
-    "Senior Full Stack Engineer",
+    "Senior Full Stack Engineer (Frontend-Led)",
     "Frontend Architect",
-    "Micro-Frontend Specialist",
-    "Team Builder & Mentor"
+    "Engineering Lead / Tech Lead",
+    "React.js · Next.js · Node.js",
+    "Micro-Frontend Specialist"
   ];
   let roleIndex = 0;
   let charIndex = 0;
